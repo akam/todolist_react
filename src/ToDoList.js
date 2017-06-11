@@ -71,7 +71,7 @@ class ToDoList extends Component {
       handleStatus={this.changeStatus.bind(this,val.id)}
       />
     })
-    if(this.state.newForm) var form = <NewToDoForm handleSubmit={this.handleSubmit} item='' description=''/>
+    if(this.state.newForm) var form = <NewToDoForm handleSubmit={this.handleSubmit} item='' description='' verb='New'/>
     return (
       <div>
         <h1>To do list:</h1>

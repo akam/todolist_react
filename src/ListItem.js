@@ -37,7 +37,9 @@ class ListItem extends Component {
     if(this.state.edit) var editForm = <NewToDoForm 
                                           handleSubmit={this.handleEdit} 
                                           item={this.state.item} 
-                                          description={this.state.description}/>
+                                          description={this.state.description}
+                                          verb='Edit'
+                                          />
     return (
       <li className={string}>
         <p>{this.state.item}</p>

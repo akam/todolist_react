@@ -28,7 +28,7 @@ class NewToDoForm extends Component {
   render() {
     return (
       <form>
-        <h2>New to do item</h2>
+        <h2>{this.props.verb} to do item</h2>
         <input 
         type="text" 
         name="item"
