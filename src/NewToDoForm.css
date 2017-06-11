@@ -1,0 +1,10 @@
+form{
+  text-align: center;
+  background-color: #ccc;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  border: 2px solid black;
+}

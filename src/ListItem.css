@@ -1,0 +1,25 @@
+ul{
+  list-style: none;
+}
+
+li{
+  background-color: lightblue;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding-bottom: 10px
+}
+
+.complete p:first-child{
+  text-decoration: line-through;
+}
+
+button{
+  margin: 5px;
+}
+
+button:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #999999;
+}
