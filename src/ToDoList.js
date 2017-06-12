@@ -14,7 +14,6 @@ class ToDoList extends Component {
     }
   this.handleSubmit = this.handleSubmit.bind(this);
   this.toggleNewForm = this.toggleNewForm.bind(this);
-  this.handleEdit = this.handleEdit.bind(this);
   }
   changeStatus(id){
     let items = [...this.state.items];
@@ -55,7 +54,7 @@ class ToDoList extends Component {
     this.setState({newForm: !this.state.newForm});
   }
 
-  handleEdit(item, description, id){
+  handleEdit(id, item, description){
     let items = [...this.state.items];
     let index = items.findIndex(function(val){
       return val.id === id;
@@ -76,7 +75,7 @@ class ToDoList extends Component {
         status={val.status} 
         handleRemove={this.removeToDo.bind(this, val.id)} 
         handleStatus={this.changeStatus.bind(this,val.id)}
-        handleEdit={this.handleEdit}
+        handleEdit={this.handleEdit.bind(this,val.id)}
         id={val.id}
         />
       })
