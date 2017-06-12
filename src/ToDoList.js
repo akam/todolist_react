@@ -50,14 +50,11 @@ class ToDoList extends Component {
     let id = this.state.id;
     id++;
     this.toggleNewForm();
-    this.setState({items});
-    this.setState({id});
+    this.setState({items, id});
   }
 
   toggleNewForm(){
-    let newForm = this.state.newForm;
-    newForm = !newForm;
-    this.setState({newForm});
+    this.setState({newForm: !this.state.newForm});
   }
 
   render() {

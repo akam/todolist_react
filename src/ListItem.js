@@ -15,9 +15,7 @@ class ListItem extends Component {
   }
 
   toggleEdit(){
-    var edit = this.state.edit;
-    edit = !edit;
-    this.setState({edit});
+    this.setState({edit: !this.state.edit});
   }
   handleEdit(item, description){
     this.toggleEdit();
