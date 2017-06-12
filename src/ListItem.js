@@ -16,8 +16,8 @@ class ListItem extends Component {
     this.setState({edit: !this.state.edit});
   }
 
-  handleSubmit(item, description, id){
-    this.props.handleEdit(item, description, id);
+  handleSubmit(item, description){
+    this.props.handleEdit(item, description, this.props.id);
     this.toggleEdit();
   }
 

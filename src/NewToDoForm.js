@@ -18,7 +18,7 @@ class NewToDoForm extends Component {
   }
   handleFormSubmit(e){
     e.preventDefault();
-    this.props.handleSubmit(this.state.item, this.state.description, this.props.id);
+    this.props.handleSubmit(this.state.item, this.state.description);
     let item = '';
     let description = '';
     this.setState({item, description});
