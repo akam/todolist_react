@@ -7,14 +7,7 @@ class ToDoList extends Component {
   constructor(props){
     super(props);
     this.state = {
-      items: Array.from({length:4}).map((el,i) =>{
-        return {
-          id: this.props.list[i].id,
-          item: this.props.list[i].item,
-          description: this.props.list[i].description,
-          status: this.props.list[i].status
-        }
-      }),
+      items: this.props.list,
       status: false,
       id: 4,
       newForm: false,
