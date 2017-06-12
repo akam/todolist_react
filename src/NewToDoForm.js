@@ -12,7 +12,6 @@ class NewToDoForm extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
   handleChange(e){
-    console.log(e.target.value);
     this.setState({
       [e.target.name]: e.target.value
     })
