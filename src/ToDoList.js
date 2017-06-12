@@ -14,7 +14,7 @@ class ToDoList extends Component {
     }
   this.handleSubmit = this.handleSubmit.bind(this);
   this.toggleNewForm = this.toggleNewForm.bind(this);
-  this.handleEditStorage = this.handleEditStorage.bind(this);
+  this.handleEdit = this.handleEdit.bind(this);
   }
   changeStatus(id){
     let items = [...this.state.items];
@@ -55,7 +55,7 @@ class ToDoList extends Component {
     this.setState({newForm: !this.state.newForm});
   }
 
-  handleEditStorage(id, item, description){
+  handleEdit(item, description, id){
     let items = [...this.state.items];
     let index = items.findIndex(function(val){
       return val.id === id;
@@ -63,6 +63,7 @@ class ToDoList extends Component {
     items[index].item = item;
     items[index].description = description;
     localStorage.setItem("todolist", JSON.stringify(items));
+    this.setState({items})
   }
 
   render() {
@@ -75,7 +76,7 @@ class ToDoList extends Component {
         status={val.status} 
         handleRemove={this.removeToDo.bind(this, val.id)} 
         handleStatus={this.changeStatus.bind(this,val.id)}
-        handleEditStorage={this.handleEditStorage}
+        handleEdit={this.handleEdit}
         id={val.id}
         />
       })
@@ -85,6 +86,7 @@ class ToDoList extends Component {
                                           item='' 
                                           description='' 
                                           verb='New'
+                                          id={this.props.id}
                                           />
     return (
       <div>
