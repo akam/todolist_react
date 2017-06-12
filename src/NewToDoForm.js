@@ -24,6 +24,7 @@ class NewToDoForm extends Component {
     let description = '';
     this.setState({item, description});
   }
+
   render() {
     return (
       <form>

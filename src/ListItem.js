@@ -6,6 +6,7 @@ class ListItem extends Component {
   constructor(props){
     super(props);
     this.state = {
+      id: this.props.id,
       item: this.props.item,
       description: this.props.description,
       edit: false
@@ -19,6 +20,7 @@ class ListItem extends Component {
   }
   handleEdit(item, description){
     this.toggleEdit();
+    this.props.handleEditStorage(this.props.id, item, description);
     this.setState({item, description});
   }
 
